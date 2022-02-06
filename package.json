@@ -1,0 +1,15 @@
+{
+  "name": "product-discounts-kata",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ohlookasquirrel/product-discounts-kata.git",
+  "author": "Michael Hall <mhall1473@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "mocha": "^9.2.0"
+  },
+  "scripts": {
+    "test": "mocha ./"
+  }
+}
