@@ -12,7 +12,8 @@ describe('calculateProductTotal', () => {
         { products: ['A', 'B', 'C', 'D'], scenario: 'Four unique products are discounted 20%', expected: 956.8},
         { products: ['A', 'B', 'C', 'D', 'E'], scenario: 'Five unique products are discounted 25%', expected: 1121.25},
         { products: ['A', 'A', 'B', 'C'], scenario: 'You are only discounted for sets of products', expected: 1106.3},
-        { products: ['A', 'A', 'B', 'C', 'A', 'B', 'C', 'D', 'E'], scenario: 'Set of 3, Set of 5, and a Single product', expected: 2227.55}
+        { products: ['A', 'A', 'B', 'C', 'A', 'B', 'C', 'D', 'E'], scenario: 'Set of 3, Set of 5, and a Single product', expected: 2227.55},
+        { products: ['A', 'A', 'B', 'A', 'B', 'C', 'A', 'B', 'C', 'D', 'A', 'B', 'C', 'D', 'E'], scenario: 'One of every pricing scenario', expected: 3782.35}
     ]
     
     tests.forEach(({products, scenario, expected}) => {

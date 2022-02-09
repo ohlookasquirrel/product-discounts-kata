@@ -21,9 +21,11 @@ module.exports.calculateProductTotal = (products) => {
     }, emptyProductCounts)
     const values = Object.values(productCounts).sort()
 
-    return values[0] * setOfFiveCost
+    const total = values[0] * setOfFiveCost
         + Math.max(values[1] - values[0], 0) * setOfFourCost
         + Math.max(values[2] - values[1], 0) * setOfThreeCost
         + Math.max(values[3] - values[2], 0) * twoProductCost
         + Math.max(values[4] - values[3], 0) * singleProductCost
+
+    return Math.round((total + Number.EPSILON) * 100) / 100
 }
